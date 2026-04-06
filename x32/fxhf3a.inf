@@ -1,0 +1,88 @@
+;fxhf3a.inf
+;
+
+[Version]
+Signature="$Windows NT$"
+Provider=%Fuji Xerox%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+DriverVer=05/07/2012,1.0.0.3
+CatalogFile=fxhf3a.cat
+
+[Manufacturer]
+%Fuji Xerox%=FX_PRINTERS
+
+[FX_PRINTERS]
+"FX DocuPrint M158 b" = INST_GDI_DRVR_2K,USBPRINT\FUJI_XEROXDocuPrint_626b
+
+
+[INST_GDI_DRVR_2K.NT]
+CopyFiles=GDI_DRIVER_FILES,OTHER_FILES,PRTPROCS_FILES
+DataSection=GDI_DATA_2K
+ConfigFile=fxhf3aUI.DLL
+HelpFile=fxhf3ahhe.chm
+DataFile=fxhf3aUI.DLL
+LanguageMonitor=%FX_MONITOR%
+PrintProcessor="fxhf3apps,fxhf3apps.dll"
+NoTestPage=1
+
+[GDI_DATA_2K]
+DriverFile=fxhf3a2k.DLL
+
+
+[GDI_DRIVER_FILES]
+fxhf3aUI.DLL
+fxhf3aRC.DLL
+fxhf3a2k.DLL
+fxhf3axlrp.DLL
+fxhf3aFM.DLL
+fxhf3aCL.DLL
+fxhf3aIPS.DLL
+fxhf3ajbf.dll
+fxhf3aduplex.exe
+fxhf3ahhe.CHM 
+fxhf3anet.dll
+
+[OTHER_FILES]
+fxhf3alm.dll
+fxhf3ausb.dll
+
+[PRTPROCS_FILES]
+fxhf3apps.dll
+fxhf3aRender.exe
+
+
+
+
+[DestinationDirs]
+DefaultDestDir=66000
+OTHER_FILES=66002
+PRTPROCS_FILES=66001
+
+[SourceDisksNames.x86]
+;1 = %instdisk%,,,""
+1 = "PDL_COMMON",fxhf3a.CAB,,
+
+[SourceDisksFiles]
+fxhf3a2K.DLL		= 1
+fxhf3aUI.DLL		= 1
+fxhf3aRC.DLL		= 1
+fxhf3aFM.DLL		= 1
+fxhf3aCL.DLL		= 1
+fxhf3aIPS.DLL		= 1
+fxhf3alm.dll		= 1
+fxhf3ahhe.chm       	= 1
+;fxhf3aPl.icm		= 1
+fxhf3aduplex.exe = 1
+fxhf3ajbf.dll		= 1
+fxhf3apps.dll		= 1
+fxhf3anet.dll		= 1
+fxhf3ausb.dll		= 1
+fxhf3axlrp.dll		= 1
+fxhf3arender.exe		= 1
+
+[Strings]
+instdisk="Install Disk"
+Fuji Xerox="Fuji Xerox"
+FX_MONITOR="FUJI XEROX DocuPrint M158 b Language Monitor,fxhf3alm.dll"
+
